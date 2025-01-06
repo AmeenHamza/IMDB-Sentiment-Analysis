@@ -1,69 +1,78 @@
-# Sentiment Analysis and Topic Modeling on IMDB Movie Reviews
+# **Sentiment Analysis and Topic Modeling on IMDB 50k Reviews**
 
-## Project Overview
+## **Overview**
+This repository contains multiple projects focused on sentiment analysis and topic modeling using machine learning (ML), deep learning (DL), and natural language processing (NLP) techniques. The IMDB 50k reviews dataset is utilized to explore, preprocess, analyze, and derive meaningful insights about movie reviews.
 
-This project involves analyzing the IMDB dataset containing 50,000 movie reviews to perform:
+---
 
-- **Sentiment Analysis**: Classifying reviews as positive or negative.
-- **Topic Modeling**: Identifying common themes discussed in the reviews.
+## **Repository Structure**
 
-## Objectives
+### **`sentiment_ML.ipynb`**
+**Description**:
+- Performs sentiment analysis on the IMDB 50k reviews dataset using:
+  - **Naive Bayes (NB)**
+  - **Logistic Regression (LR)**
 
-- Build classifiers to categorize reviews.
-- Compare models using accuracy, precision, recall, and F1-score.
-- Discover common topics or themes in the reviews.
-- Interpret and visualize the discovered topics.
+**Key Features**:
+- Comparison of metrics like accuracy, precision, recall, and F1 score for both models.
+- Insights into model performance for classification tasks.
 
-## Dataset
+**Colab Link**:  
+[View Sentiment Analysis with ML](https://colab.research.google.com/github/AmeenHamza/IMDB-Sentiment-Analysis/blob/main/sentiment_ML.ipynb)
 
-The dataset consists of 50,000 movie reviews labeled as positive or negative. It is balanced, with an equal number of positive and negative reviews.
+---
 
-## Methodology
+### **`sentiment_classification_DL.ipynb`**
+**Description**:
+- Applies deep learning to sentiment classification using:
+  - **Long Short-Term Memory (LSTM) networks**
 
-### 1. Data Preprocessing
+**Key Features**:
+- Implementation of LSTM for textual data.
+- Analysis of performance metrics.
 
-- **Text Cleaning**: Removal of HTML tags, special characters, and stopwords.
-- **Tokenization**: Splitting text into individual words.
-- **Lemmatization/Stemming**: Reducing words to their base forms.
+**Colab Link**:  
+[View Sentiment Analysis with DL](https://colab.research.google.com/github/AmeenHamza/IMDB-Sentiment-Analysis/blob/main/sentiment_classification_DL.ipynb)
 
-### 2. Sentiment Analysis
+---
 
-- Implemented models:
-  - Logistic Regression
-  - Support Vector Machine (SVM)
-  - Long Short-Term Memory (LSTM) Network
-- Evaluation Metrics:
-  - Accuracy
-  - Precision
-  - Recall
-  - F1-Score
+### **`Topic_Modeling_BERT.ipynb`**
+**Description**:
+- Performs topic modeling on the IMDB 50k reviews dataset using **BERTopic**.
 
-### 3. Topic Modeling
+**Key Features**:
+- Extracts topics to discover themes in reviews.
+- Provides insights into common discussion points such as acting, screenplay, and music.
 
-- Techniques used:
-  - Latent Dirichlet Allocation (LDA)
-  - Non-negative Matrix Factorization (NMF)
-- Visualization tools:
-  - Word Clouds
-  - Bar Charts of Top Words per Topic
+**Colab Link**:  
+[View Topic Modeling with BERTopic](https://colab.research.google.com/github/AmeenHamza/IMDB-Sentiment-Analysis/blob/main/Topic_Modeling_BERT.ipynb)
 
-## Results
+---
 
-- **Sentiment Analysis**: Achieved highest accuracy with the LSTM model.
-- **Topic Modeling**: Identified key themes such as acting, screenplay, and music.
+### **`index.ipynb`**
+**Description**:
+- A comprehensive file combining all the analyses and comparisons in one place.
 
-## Conclusion
+**Key Features**:
+1. **Exploratory Data Analysis (EDA)**:
+   - Visualizations of demographic and textual data.
+   - Identification of the best and worst-reviewed movies by genre.
+2. **Sentiment Analysis Comparison**:
+   - Metrics comparison for Naive Bayes (NB), Logistic Regression (LR), and LSTM models.
+3. **Topic Modeling with BERTopic**:
+   - Extracting and visualizing key topics in the reviews.
+4. **Preprocessed data and model training insights.**
 
-The project successfully built models to classify sentiments and identify prevalent topics in movie reviews, providing insights into audience opinions.
+**Colab Link**:  
+[View Combined Analysis](https://colab.research.google.com/github/AmeenHamza/IMDB-Sentiment-Analysis/blob/main/index.ipynb)
 
-## How to Run
+---
 
-1. Clone the repository.
-2. Install required libraries: `pip install -r requirements.txt`
-3. Run the Jupyter Notebook: `jupyter notebook analysis.ipynb`
+## **Installation**
 
-## References
+To use the notebooks, clone this repository and set up the required environment:
 
-- [IMDB Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
-- [NLTK Documentation](https://www.nltk.org/)
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+```bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+pip install -r requirements.txt
